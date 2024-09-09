@@ -1,0 +1,1 @@
+project with magic to clean up kube nodes
