@@ -1,0 +1,10 @@
+apiVersion: crd.norbinto/v1alpha1
+kind: NodeCleaner
+metadata:
+  labels:
+    app.kubernetes.io/name: kube-ncleaner
+    app.kubernetes.io/managed-by: kustomize
+  name: nodecleaner-sample
+spec:
+  lastlogline: "start worker process 39\n"
+  scaledjobname: "onprem"

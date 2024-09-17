@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: kube-ncleaner
 repo: norbinto/kube-ncleaner
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: norbinto
+  group: crd
+  kind: NodeCleaner
+  path: norbinto/kube-ncleaner/api/v1alpha1
+  version: v1alpha1
 version: "3"

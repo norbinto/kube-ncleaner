@@ -1,8 +1,11 @@
----
+# permissions for end users to edit nodecleaners.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: manager-role
+  labels:
+    app.kubernetes.io/name: kube-ncleaner
+    app.kubernetes.io/managed-by: kustomize
+  name: nodecleaner-editor-role
 rules:
 - apiGroups:
   - crd.norbinto
@@ -19,14 +22,6 @@ rules:
 - apiGroups:
   - crd.norbinto
   resources:
-  - nodecleaners/finalizers
-  verbs:
-  - update
-- apiGroups:
-  - crd.norbinto
-  resources:
   - nodecleaners/status
   verbs:
   - get
-  - patch
-  - update
